@@ -1,2 +1,2 @@
-# React-
-All React Projects and Notes
+## Micro Projects
+All Practice Projects
