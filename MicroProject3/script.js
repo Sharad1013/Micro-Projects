@@ -17,7 +17,8 @@ Array.from(buttons).forEach((button) => {
         string = result.toFixed(2);
       }
       string = eval(string);
-      input.value = string;
+      let res = Number(string);
+      input.value = res.toFixed(2);
     } else if (["+", "-", "*", "/"].includes(e.target.innerHTML)) {
       // Add spaces around the operator
       string += ` ${e.target.innerHTML} `;
