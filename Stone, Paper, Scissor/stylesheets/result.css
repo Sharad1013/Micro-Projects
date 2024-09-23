@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8bc34a;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #8bc34a;
+}
+
+.container > h1 {
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-size: 91px;
+  font-weight: 600;
+  line-height: 106.64px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.container p {
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-size: 41px;
+  font-weight: 600;
+  line-height: 48.05px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.trophy-section {
+  top: 20px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.trophy {
+  margin-top: 150px;
+  width: 180px;
+  animation: tilt 0.5s 2;
+}
+
+.play-again {
+  background-color: white;
+  color: black;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 17.58px;
+  letter-spacing: 0.1em;
+  text-align: left;
+}
+
+.play-again:hover {
+  background-color: #dddddd;
+}
+
+.rules {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 7px 22px;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: Roboto;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 24.61px;
+  letter-spacing: 0.1em;
+  text-align: left;
+}
+.rules:hover {
+  background-color: #f3f2f276;
+}
+
+.stars {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0px;
+  animation: twinkle 1.5s infinite ease-in-out;
+  transform-origin: center;
+}
+
+.star-img {
+  width: 450px;
+}
+
+.rule {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 335px;
+  bottom: 0;
+  right: 0;
+  gap: 20px;
+  border-radius: 13px 13px 13px 13px;
+  border: 7px solid #ffffff;
+  background-color: #004429;
+  margin-bottom: 6rem;
+  margin-right: 3.5rem;
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.23px;
+  text-align: left;
+}
+
+.rule > h1 {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 29px;
+  font-weight: 500;
+  line-height: 33.98px;
+  text-align: left;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  text-align: justify;
+  list-style-type: none;
+}
+
+ul li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.lists {
+  color: #fff;
+  width: 230px;
+}
+
+/* utility class */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url("../assets/Rectangle5.png");
+  background-size: contain;
+  width: 10px;
+  height: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: -20px;
+  right: -25px;
+  background-color: red;
+  border: 5px solid #fff;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  line-height: 30px;
+  padding: 2px;
+}
+
+.close-btn:hover {
+  background-color: darkred;
+}
+
+/* stars twinkle animation */
+@keyframes twinkle {
+  0% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+  }
+  50% {
+    opacity: 0.2;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+  }
+  100% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+  }
+}
+
+/* trophy shake animation  */
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
